@@ -1,0 +1,22 @@
+{
+  "name": "clothes_admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rehellinen/clothes_admin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rehellinen/clothes_admin/issues"
+  },
+  "homepage": "https://github.com/rehellinen/clothes_admin#readme",
+  "devDependencies": {
+    "eslint": "^5.5.0"
+  }
+}
