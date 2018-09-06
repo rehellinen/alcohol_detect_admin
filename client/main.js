@@ -1,15 +1,5 @@
-let func = () => {
-  console.log(3)
-}
+import Vue from 'vue'
 
-let arr = [1, 2, 4]
-let arr2 = arr.map(item => item  * 2)
+const app = new Vue()
 
-let arr3 = new Set()
-
-function *hhh() {
-  yield 12
-  yield 111
-}
-
-console.log(hhh)
+app.$mount()
