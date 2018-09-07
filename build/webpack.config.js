@@ -6,8 +6,9 @@ module.exports = {
     client: config.entry
   },
   output: {
-    filename: '[name].js',
-    path: config.output
+    filename: '[name].bundle.js',
+    path: config.output,
+    chunkFilename: '[name].chunk.js'
   },
   optimization: {
     splitChunks: {
