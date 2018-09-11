@@ -1,0 +1,6 @@
+.container{
+    display: flex;
+    color: blue;
+    width: 500px;
+    justify-content: center;
+}

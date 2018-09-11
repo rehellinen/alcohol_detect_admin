@@ -6,27 +6,9 @@ module.exports = {
     client: config.entry
   },
   output: {
-    filename: '[name].bundle.js',
     path: config.output,
+    filename: '[name].bundle.js',
     chunkFilename: '[name].chunk.js'
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        common: {
-          name: 'common',
-          chunks: 'all',
-          minSize: 1,
-          priority:  0
-        },
-        vendor: {
-          name:  'vendor',
-          test: /node_modules/,
-          chunks: 'all',
-          priority: 10
-        }
-      }
-    }
   },
   module: {
     rules: [
@@ -34,6 +16,26 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.sass$/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {loader: 'sass-loader'}
+        ]
+      }, {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              publicPath: '',
+              outputPath: 'dist/',
+              useRelativePath: true
+            }
+          }
+        ]
       }
     ]
   }

@@ -1,5 +1,1 @@
-import Vue from 'vue'
-
-const app = new Vue()
-
-app.$mount()
+import './static/css/base.css'
